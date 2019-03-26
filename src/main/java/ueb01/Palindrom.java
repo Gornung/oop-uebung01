@@ -13,7 +13,7 @@ class Palindrom {
         int  i = 0;
 
         if (chars.length % 2 == 0) {
-            for (; cs.size() <= chars.length / 2; i++) {
+            for (; cs.size() < chars.length / 2; i++) {
                 cs.push(chars[i]);
             }
             for (; cs.size() > 0; i++) {
@@ -22,10 +22,11 @@ class Palindrom {
 
                 return false;
             }
+            return true;
         }
 
         if (chars.length % 2 == 1) {
-            for (; cs.size() <= chars.length / 2; i++) {
+            for (; cs.size() < chars.length / 2; i++) {
                 cs.push(chars[i]);
             }
 
@@ -37,8 +38,9 @@ class Palindrom {
 
                 return false;
             }
+            return true;
         }
 
-		return false;
+        return true;
 	}
 }
